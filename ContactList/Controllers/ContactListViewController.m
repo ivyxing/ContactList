@@ -170,6 +170,17 @@
     return cell;
 }
 
+- (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    NSMutableArray *alphabet = [NSMutableArray array];
+    
+    for (char current = 'a'; current <= 'z'; current++)
+    {
+        [alphabet addObject:[NSString stringWithFormat:@"%c", current]];
+    }
+    
+    return alphabet;
+}
 
 #pragma mark - Helper Functions: Initialization
 
