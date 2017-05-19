@@ -8,8 +8,11 @@
 
 #import "ContactInfoTableViewCell.h"
 
+// Objects
 #import "ContactPerson.h"
+// Utilities
 #import "ColorGenerator.h"
+#import "NSString+ContactList.h"
 
 static const int kGradientDarkness = 100;
 
@@ -49,6 +52,7 @@ static const int kGradientDarkness = 100;
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.containerView.bounds;
     
+    // grab 2 random dark colors and make a gradient
     UIColor *firstColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
     UIColor *secondColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
     gradient.colors = @[(id)firstColor.CGColor, (id)secondColor.CGColor];
@@ -62,9 +66,10 @@ static const int kGradientDarkness = 100;
     
     ContactPerson *person = (ContactPerson *)object;
     
+    // populate views
     self.firstNameLabel.text = person.firstName;
     self.lastNameLabel.text = person.lastName;
-    self.phonerNumberLabel.text = person.phoneNumber;
+    self.phonerNumberLabel.text = [person.phoneNumber toPhoneNumber];
     self.profileImageView.image = person.profileImage;
 }
 

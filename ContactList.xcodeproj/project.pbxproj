@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A830AAD1ECECB7A00BB9299 /* ColorGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A830AAC1ECECB7A00BB9299 /* ColorGenerator.m */; };
 		5A830AC01ECED85100BB9299 /* UIAlertController+ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A830ABF1ECED85100BB9299 /* UIAlertController+ContactList.m */; };
+		5A830AC61ECEDB8900BB9299 /* NSString+ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A830AC51ECEDB8900BB9299 /* NSString+ContactList.m */; };
 		5A8639DD1ECD5BE500F3D3C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8639DC1ECD5BE500F3D3C5 /* main.m */; };
 		5A8639E01ECD5BE500F3D3C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8639DF1ECD5BE500F3D3C5 /* AppDelegate.m */; };
 		5A8639E61ECD5BE500F3D3C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A8639E41ECD5BE500F3D3C5 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 		5A830AAC1ECECB7A00BB9299 /* ColorGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorGenerator.m; sourceTree = "<group>"; };
 		5A830ABE1ECED85100BB9299 /* UIAlertController+ContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+ContactList.h"; sourceTree = "<group>"; };
 		5A830ABF1ECED85100BB9299 /* UIAlertController+ContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+ContactList.m"; sourceTree = "<group>"; };
+		5A830AC41ECEDB8900BB9299 /* NSString+ContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ContactList.h"; sourceTree = "<group>"; };
+		5A830AC51ECEDB8900BB9299 /* NSString+ContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ContactList.m"; sourceTree = "<group>"; };
 		5A8639D81ECD5BE500F3D3C5 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A8639DC1ECD5BE500F3D3C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A8639DE1ECD5BE500F3D3C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 		5A830AB71ECED7A500BB9299 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5A830AC41ECEDB8900BB9299 /* NSString+ContactList.h */,
+				5A830AC51ECEDB8900BB9299 /* NSString+ContactList.m */,
 				5A830ABE1ECED85100BB9299 /* UIAlertController+ContactList.h */,
 				5A830ABF1ECED85100BB9299 /* UIAlertController+ContactList.m */,
 			);
@@ -288,6 +293,7 @@
 				5A830AC01ECED85100BB9299 /* UIAlertController+ContactList.m in Sources */,
 				5A863A141ECD5EC700F3D3C5 /* ContactInfoTableViewCell.m in Sources */,
 				5A8639E01ECD5BE500F3D3C5 /* AppDelegate.m in Sources */,
+				5A830AC61ECEDB8900BB9299 /* NSString+ContactList.m in Sources */,
 				5A863A091ECD5D3000F3D3C5 /* ContactListViewController.m in Sources */,
 				5A8639DD1ECD5BE500F3D3C5 /* main.m in Sources */,
 				5A830AAD1ECECB7A00BB9299 /* ColorGenerator.m in Sources */,

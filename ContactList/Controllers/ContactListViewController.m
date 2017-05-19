@@ -98,7 +98,10 @@
                 
                 // only fetch contacts if permission granted
                 if (granted)
-                { [weakself fetchContacts]; }
+                {
+                    [weakself fetchContacts];
+                    [weakself.tableView reloadData];
+                }
                 else
                 { [weakself showAccessDeniedMessage]; }
                 
@@ -121,7 +124,7 @@
 {
     ABRecordRef source = ABAddressBookCopyDefaultSource(addressBook);
     NSArray *records = (__bridge_transfer NSArray *)ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering(addressBook, source, kABPersonSortByLastName);
-    [self parseContacts:records];
+    [self populateContacts:records];
     
     CFRelease(source);
 }
@@ -174,6 +177,7 @@
 
 - (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
+    // index titles -> alphabet A-Z
     NSMutableArray *alphabet = [NSMutableArray array];
     
     for (char current = 'a'; current <= 'z'; current++)
@@ -212,7 +216,7 @@
 #pragma mark - Helper Functions: Utilities
 
 // Populates person objects from contact records
-- (void)parseContacts:(NSArray *)contactRecords
+- (void)populateContacts:(NSArray *)contactRecords
 {
     for (int i = 0; i < contactRecords.count; i++)
     {
