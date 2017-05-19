@@ -9,6 +9,9 @@
 #import "ContactInfoTableViewCell.h"
 
 #import "ContactPerson.h"
+#import "ColorGenerator.h"
+
+static const int kGradientDarkness = 100;
 
 @interface ContactInfoTableViewCell()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -32,11 +35,25 @@
     { label.text = @""; }
     
     // my number label text
-    self.phoneNumberTextLabel.text = NSLocalizedString(@"My number:", "My number");
+    self.phoneNumberTextLabel.text = NSLocalizedString(@"My Number:", "My Number");
     
     // image
     self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.height / 2;
     self.profileImageView.layer.masksToBounds = YES;
+    
+    // container
+    self.containerView.layer.cornerRadius = 5;
+    self.containerView.layer.masksToBounds = YES;
+    
+    // random gradient
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.containerView.bounds;
+    
+    UIColor *firstColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
+    UIColor *secondColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
+    gradient.colors = @[(id)firstColor.CGColor, (id)secondColor.CGColor];
+    [self.containerView.layer insertSublayer:gradient atIndex:0];
+    
 }
 
 - (void)tableView:(UITableView *)tableView setupCellWithObject:(id)object;

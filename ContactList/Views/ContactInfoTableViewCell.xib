@@ -12,52 +12,52 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="111" id="vjm-ex-tgA" customClass="ContactInfoTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="359" height="111"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="129" id="vjm-ex-tgA" customClass="ContactInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vjm-ex-tgA" id="jzZ-BH-Ya5">
-                <rect key="frame" x="0.0" y="0.0" width="359" height="110.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psq-bH-7Nu">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="110.5"/>
+                        <rect key="frame" x="0.0" y="2" width="374" height="124.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ujl-Zv-UCB">
-                                <rect key="frame" x="16" y="24" width="62.5" height="62.5"/>
+                                <rect key="frame" x="16" y="31" width="62.5" height="62.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="62.5" id="AuK-zI-5uY"/>
                                     <constraint firstAttribute="width" secondItem="Ujl-Zv-UCB" secondAttribute="height" multiplier="1:1" id="Sfl-6b-Eyq"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAe-Um-b3T">
-                                <rect key="frame" x="93.5" y="30" width="249.5" height="50.5"/>
+                                <rect key="frame" x="93.5" y="30" width="264.5" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZN-Y2-Me4">
-                                        <rect key="frame" x="0.0" y="24.5" width="42" height="21"/>
+                                        <rect key="frame" x="0.0" y="38.5" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tWP-S5-rWU">
-                                        <rect key="frame" x="47" y="24.5" width="42" height="21"/>
+                                        <rect key="frame" x="47" y="38.5" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-BT-Ptx">
-                                        <rect key="frame" x="0.0" y="5" width="63.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="5" width="49" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSd-kr-pcO">
-                                        <rect key="frame" x="73.5" y="5" width="176" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="59" y="5" width="205.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="BZN-Y2-Me4" secondAttribute="bottom" constant="5" id="0ru-vK-jwl"/>
                                     <constraint firstItem="OSd-kr-pcO" firstAttribute="height" secondItem="a7W-BT-Ptx" secondAttribute="height" id="6sq-bv-ldh"/>
@@ -74,7 +74,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JAe-Um-b3T" firstAttribute="top" secondItem="psq-bH-7Nu" secondAttribute="top" constant="30" id="DKn-Rz-qSa"/>
                             <constraint firstItem="Ujl-Zv-UCB" firstAttribute="leading" secondItem="psq-bH-7Nu" secondAttribute="leading" constant="16" id="DuW-Sw-Ad9"/>
@@ -85,13 +85,15 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="psq-bH-7Nu" firstAttribute="top" secondItem="jzZ-BH-Ya5" secondAttribute="top" id="8Mp-MR-pJF"/>
-                    <constraint firstAttribute="bottom" secondItem="psq-bH-7Nu" secondAttribute="bottom" id="EM5-nS-TQ9"/>
-                    <constraint firstItem="psq-bH-7Nu" firstAttribute="leading" secondItem="jzZ-BH-Ya5" secondAttribute="leading" id="Uhw-Ee-Tgl"/>
-                    <constraint firstAttribute="trailing" secondItem="psq-bH-7Nu" secondAttribute="trailing" id="a7q-y3-NUL"/>
+                    <constraint firstItem="psq-bH-7Nu" firstAttribute="leading" secondItem="jzZ-BH-Ya5" secondAttribute="leading" id="A1p-C0-04d"/>
+                    <constraint firstItem="psq-bH-7Nu" firstAttribute="top" secondItem="jzZ-BH-Ya5" secondAttribute="top" constant="2" id="PIQ-iH-cIc"/>
+                    <constraint firstAttribute="bottom" secondItem="psq-bH-7Nu" secondAttribute="bottom" constant="2" id="crH-Al-GfC"/>
+                    <constraint firstAttribute="trailing" secondItem="psq-bH-7Nu" secondAttribute="trailing" id="h1s-ng-cwg"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="containerView" destination="psq-bH-7Nu" id="PHi-5T-S2w"/>
                 <outlet property="firstNameLabel" destination="a7W-BT-Ptx" id="UgZ-Qi-dvd"/>
@@ -104,7 +106,7 @@
                 <outletCollection property="infoLabelCollection" destination="OSd-kr-pcO" id="t5S-WR-Gol"/>
                 <outletCollection property="infoLabelCollection" destination="a7W-BT-Ptx" id="73i-JF-f2p"/>
             </connections>
-            <point key="canvasLocation" x="-27.5" y="-37.5"/>
+            <point key="canvasLocation" x="308" y="-17.5"/>
         </tableViewCell>
     </objects>
 </document>
