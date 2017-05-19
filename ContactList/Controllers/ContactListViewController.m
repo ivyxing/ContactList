@@ -14,6 +14,8 @@
 // Views
 #import "ContactPerson.h"
 #import "ContactInfoTableViewCell.h"
+// Utilities
+#import "UIAlertController+ContactList.h"
 
 @interface ContactListViewController()<UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 {
@@ -70,7 +72,7 @@
     if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusDenied)
     {
         // user denied autorization
-        [self showGoToSettingsPrompt];
+        [self showAccessDeniedMessage];
     }
     else if (ABAddressBookGetAuthorizationStatus() == kABAuthorizationStatusRestricted)
     {
@@ -242,28 +244,44 @@
 
 #pragma mark - Helper Functions: Alerts
 
-// Direct user to settings to allow contact access
-- (void)showGoToSettingsPrompt
-{
-    
-}
-
 // Show user denied access message
 - (void)showAccessDeniedMessage
 {
+    NSString *message = NSLocalizedString(@"Access denied. Don't worry, you can go to settings later to grant access again.", @"Access denied message");
     
+    UIAlertController *alertController = [UIAlertController alertWithMessage:message];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 // Show permission error
 - (void)showPermissionError
 {
+    NSString *message = NSLocalizedString(@"Permission denied.", @"Permission denied");
     
+    UIAlertController *alertController = [UIAlertController alertWithMessage:message];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 // An error has occurred while checking permissions
 - (void)showAddressbookError:(NSError *)error
 {
+    NSString *message = error.localizedDescription;
     
+    // use failure reason if possible
+    if (error.localizedFailureReason != nil )
+    { message = error.localizedFailureReason; }
+    
+    // show error message alert
+    UIAlertController *alert = [UIAlertController alertWithMessage:message];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+#pragma mark - Orientation 
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 
