@@ -10,7 +10,7 @@
 
 @interface ContactInfoTableViewCell : UITableViewCell
 
-+(NSString *)cellIdentifier;
++ (NSString *)cellIdentifier;
 + (void)registerCellForTableView:(UITableView *)tableView;
 - (void)tableView:(UITableView *)tableView setupCellWithObject:(id)object;
 

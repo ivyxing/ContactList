@@ -94,6 +94,8 @@ static const int kGradientDarkness = 100;
 }
 
 #pragma mark - Helper Functions: Utilities
+
+// Blurs the given image with the Gaussian Blur
 - (UIImage *)getBlurredImage:(UIImage *)theImage
 {
     CIContext *context = [CIContext contextWithOptions:nil];
@@ -112,6 +114,7 @@ static const int kGradientDarkness = 100;
     return resultImage;
 }
 
+// Returns a gradient made of random darker RGB values
 - (CAGradientLayer *)getRandomGradient
 {
     // random gradient
