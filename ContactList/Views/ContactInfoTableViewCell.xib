@@ -51,7 +51,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSd-kr-pcO">
-                                        <rect key="frame" x="59" y="5" width="205.5" height="24"/>
+                                        <rect key="frame" x="54" y="5" width="210.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="BZN-Y2-Me4" secondAttribute="bottom" constant="5" id="0ru-vK-jwl"/>
                                     <constraint firstItem="OSd-kr-pcO" firstAttribute="height" secondItem="a7W-BT-Ptx" secondAttribute="height" id="6sq-bv-ldh"/>
-                                    <constraint firstItem="OSd-kr-pcO" firstAttribute="leading" secondItem="a7W-BT-Ptx" secondAttribute="trailing" constant="10" id="7x0-y9-Vsg"/>
+                                    <constraint firstItem="OSd-kr-pcO" firstAttribute="leading" secondItem="a7W-BT-Ptx" secondAttribute="trailing" constant="5" id="7x0-y9-Vsg"/>
                                     <constraint firstItem="tWP-S5-rWU" firstAttribute="leading" secondItem="BZN-Y2-Me4" secondAttribute="trailing" constant="5" id="AQj-2c-kjt"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tWP-S5-rWU" secondAttribute="trailing" id="HXf-Pv-m4v"/>
                                     <constraint firstAttribute="trailing" secondItem="OSd-kr-pcO" secondAttribute="trailing" id="Pxf-WX-p3P"/>

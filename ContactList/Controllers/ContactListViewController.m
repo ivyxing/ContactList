@@ -201,9 +201,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100;
  
-    self.title = NSLocalizedString(@"All Contacts", @"All Contacts");
     self.searchBar.placeholder = NSLocalizedString(@"Search", @"Search");
-    
     isSearching = NO;
 }
 
@@ -287,7 +285,6 @@
 {
     return UIInterfaceOrientationMaskPortrait;
 }
-
 
 #pragma mark - UISearchBarDelegate
 
