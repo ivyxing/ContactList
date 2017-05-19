@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ContactListViewController.h
 //  ContactList
 //
 //  Created by Ivy Xing on 5/17/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ContactListViewController : UIViewController
 
 @end
-
