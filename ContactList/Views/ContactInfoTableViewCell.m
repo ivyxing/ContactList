@@ -18,6 +18,7 @@ static const int kGradientDarkness = 100;
 
 @interface ContactInfoTableViewCell()
 @property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIImageView *blurredImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
@@ -47,17 +48,6 @@ static const int kGradientDarkness = 100;
     // container
     self.containerView.layer.cornerRadius = 5;
     self.containerView.layer.masksToBounds = YES;
-    
-    // random gradient
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.containerView.bounds;
-    
-    // grab 2 random dark colors and make a gradient
-    UIColor *firstColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
-    UIColor *secondColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
-    gradient.colors = @[(id)firstColor.CGColor, (id)secondColor.CGColor];
-    [self.containerView.layer insertSublayer:gradient atIndex:0];
-    
 }
 
 - (void)tableView:(UITableView *)tableView setupCellWithObject:(id)object;
@@ -71,9 +61,23 @@ static const int kGradientDarkness = 100;
     self.lastNameLabel.text = person.lastName;
     self.phonerNumberLabel.text = [person.phoneNumber toPhoneNumber];
     self.profileImageView.image = person.profileImage;
+    
+    // if possible, set blurred photo for background
+    if (!UIAccessibilityIsReduceTransparencyEnabled() && person.profileImage != nil)
+    {
+        UIImage *blurredImage = [self getBlurredImage:person.profileImage];
+        self.blurredImageView.image = blurredImage;
+    }
+    else
+    {
+        // set some kind of gradient
+        CAGradientLayer *gradient = [self getRandomGradient];
+        gradient.frame = self.containerView.bounds;
+        [self.containerView.layer insertSublayer:gradient atIndex:0];
+    }
 }
 
-#pragma mark - Initialization Helper Functions
+#pragma mark - Helper Functions: Initialization
 // Returns the cell's identifier
 + (NSString *)cellIdentifier
 {
@@ -85,6 +89,38 @@ static const int kGradientDarkness = 100;
 {
     UINib *nib = [UINib nibWithNibName:[self cellIdentifier] bundle:nil];
     [tableView registerNib:nib forCellReuseIdentifier:[self cellIdentifier]];
+}
+
+#pragma mark - Helper Functions: Utilities
+- (UIImage *)getBlurredImage:(UIImage *)theImage
+{
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CIImage *inputImage = [CIImage imageWithCGImage:theImage.CGImage];
+    
+    // Gaussian Blur
+    CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
+    [filter setValue:inputImage forKey:kCIInputImageKey];
+    CIImage *result = [filter valueForKey:kCIOutputImageKey];
+    
+    // create cg image
+    CGImageRef cgImage = [context createCGImage:result fromRect:[inputImage extent]];
+    UIImage *resultImage = [UIImage imageWithCGImage:cgImage];
+    CGImageRelease(cgImage);
+    
+    return resultImage;
+}
+
+- (CAGradientLayer *)getRandomGradient
+{
+    // random gradient
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    // grab 2 random dark colors and make a gradient
+    UIColor *firstColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
+    UIColor *secondColor = [ColorGenerator generateRandomColorWithUniformRGBValue:kGradientDarkness];
+    gradient.colors = @[(id)firstColor.CGColor, (id)secondColor.CGColor];
+    
+    return  gradient;
 }
 
 @end

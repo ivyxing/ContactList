@@ -16,12 +16,18 @@
             <rect key="frame" x="0.0" y="0.0" width="374" height="129"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vjm-ex-tgA" id="jzZ-BH-Ya5">
-                <rect key="frame" x="0.0" y="0.0" width="374" height="128.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psq-bH-7Nu">
                         <rect key="frame" x="0.0" y="2" width="374" height="124.5"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lc9-KO-wxm">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="124" id="htR-sJ-urW"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ujl-Zv-UCB">
                                 <rect key="frame" x="16" y="31" width="62.5" height="62.5"/>
                                 <constraints>
@@ -78,10 +84,14 @@
                         <constraints>
                             <constraint firstItem="JAe-Um-b3T" firstAttribute="top" secondItem="psq-bH-7Nu" secondAttribute="top" constant="30" id="DKn-Rz-qSa"/>
                             <constraint firstItem="Ujl-Zv-UCB" firstAttribute="leading" secondItem="psq-bH-7Nu" secondAttribute="leading" constant="16" id="DuW-Sw-Ad9"/>
+                            <constraint firstAttribute="bottom" secondItem="lc9-KO-wxm" secondAttribute="bottom" id="II2-j5-5t1"/>
+                            <constraint firstItem="lc9-KO-wxm" firstAttribute="top" secondItem="psq-bH-7Nu" secondAttribute="top" id="Mia-rG-eu1"/>
                             <constraint firstItem="JAe-Um-b3T" firstAttribute="centerY" secondItem="psq-bH-7Nu" secondAttribute="centerY" id="W3w-qL-UfF"/>
                             <constraint firstItem="Ujl-Zv-UCB" firstAttribute="centerY" secondItem="psq-bH-7Nu" secondAttribute="centerY" id="WRu-x3-Oag"/>
                             <constraint firstAttribute="trailing" secondItem="JAe-Um-b3T" secondAttribute="trailing" constant="16" id="aWm-QE-qrS"/>
                             <constraint firstItem="JAe-Um-b3T" firstAttribute="leading" secondItem="Ujl-Zv-UCB" secondAttribute="trailing" constant="15" id="b6n-gU-9mE"/>
+                            <constraint firstAttribute="trailing" secondItem="lc9-KO-wxm" secondAttribute="trailing" id="iSk-rt-iSQ"/>
+                            <constraint firstItem="lc9-KO-wxm" firstAttribute="leading" secondItem="psq-bH-7Nu" secondAttribute="leading" id="ruG-7G-fbf"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -95,6 +105,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="blurredImageView" destination="lc9-KO-wxm" id="j2f-6S-ukO"/>
                 <outlet property="containerView" destination="psq-bH-7Nu" id="PHi-5T-S2w"/>
                 <outlet property="firstNameLabel" destination="a7W-BT-Ptx" id="UgZ-Qi-dvd"/>
                 <outlet property="lastNameLabel" destination="OSd-kr-pcO" id="2bp-Io-jI7"/>
