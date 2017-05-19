@@ -70,6 +70,8 @@ static const int kGradientDarkness = 100;
     }
     else
     {
+        self.blurredImageView.image = nil;
+        
         // set some kind of gradient
         CAGradientLayer *gradient = [self getRandomGradient];
         gradient.frame = self.containerView.bounds;
